@@ -1,0 +1,17 @@
+#!/bin/bash
+
+GREEN='\033[0;32m'
+NORMAL='\033[0m'
+echo -en "${GREEN}"
+dirproject="$(pwd)"
+echo -en "${GREEN}Путь установки: $dirproject${NORMAL}\n"
+mkdir _src
+cd _src
+mkdir scss fonts img js
+cd js
+touch script.js
+cd ..
+cd scss
+touch style.scss
+cd ../..
+touch index.html

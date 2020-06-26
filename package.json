@@ -1,0 +1,23 @@
+{
+  "name": "portfolio_v_2",
+  "version": "2.0.0",
+  "description": "Portfolio svyatoslavlp.ru version 2 \u001b[B\u001b[2~\u001b[B\u001b[2~2020-06 bem new design",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svyatoslavlp/portfolio_v_2.git"
+  },
+  "author": "svyatoslavlp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svyatoslavlp/portfolio_v_2/issues"
+  },
+  "homepage": "https://github.com/svyatoslavlp/portfolio_v_2#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
+  }
+}
