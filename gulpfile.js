@@ -31,11 +31,12 @@ let path = {
 let { src, dest } = require("gulp"),
   gulp = require("gulp"),
   browsersync = require("browser-sync").create();
-  fileinclude = require("gulp-file-include"),
-  del = require("del"),
-  scss = require("gulp-sass"),
-  autoprefixer = require("gulp-autoprefixer"),
-  group_media = require("gulp-group-css-media-queries");
+(fileinclude = require("gulp-file-include")),
+  (del = require("del")),
+  (scss = require("gulp-sass")),
+  (autoprefixer = require("gulp-autoprefixer")),
+  (group_media = require("gulp-group-css-media-queries")),
+  (clean_css = require("gulp-clean-css"));
 
 function browserSync(params) {
   browsersync.init({
@@ -58,17 +59,15 @@ function css(params) {
   return src(path.src.css)
     .pipe(
       scss({
-        outputStyle: "expanded"
+        outputStyle: "expanded",
       })
     )
-    .pipe(
-      group_media()
-    )
+    .pipe(group_media())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
-        cascade: true
-      })
+        cascade: true,
+      }).pipe(clean_css())
     )
     .pipe(dest(path.build.css)) // собрать новый css
     .pipe(browsersync.stream()); // обновить браузер
@@ -77,7 +76,6 @@ function css(params) {
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
-
 }
 
 function clean(params) {
