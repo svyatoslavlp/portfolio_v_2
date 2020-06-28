@@ -22,6 +22,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-file-include": "^2.2.2",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-sass": "^4.1.0"
   }
 }
