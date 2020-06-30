@@ -37,7 +37,8 @@ let { src, dest } = require("gulp"),
   autoprefixer = require("gulp-autoprefixer"),
   group_media = require("gulp-group-css-media-queries"),
   clean_css = require("gulp-clean-css"),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename"),
+  uglify = require("gulp-uglify-es").default;
 
 function browserSync(params) {
   browsersync.init({
@@ -85,6 +86,15 @@ function js() {
   return src(path.src.js)
     .pipe(fileinclude()) // собираем js файлы в один
     .pipe(dest(path.build.js)) // собрать новый js
+    .pipe(
+      uglify()
+    )
+    .pipe(
+      rename({
+        extname: ".min.js",
+      })
+    )
+    .pipe(dest(path.build.js)) // собрать сжатый js
     .pipe(browsersync.stream()); // обновить браузер
 }
 
