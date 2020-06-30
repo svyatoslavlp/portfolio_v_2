@@ -51,7 +51,7 @@ function browserSync(params) {
 
 function html() {
   return src(path.src.html)
-    .pipe(fileinclude())
+    .pipe(fileinclude()) // собираем html файлы в один
     .pipe(dest(path.build.html)) // собрать новый html
     .pipe(browsersync.stream()); // обновить браузер
 }
@@ -81,18 +81,27 @@ function css(params) {
     .pipe(browsersync.stream()); // обновить браузер
 }
 
+function js() {
+  return src(path.src.js)
+    .pipe(fileinclude()) // собираем js файлы в один
+    .pipe(dest(path.build.js)) // собрать новый js
+    .pipe(browsersync.stream()); // обновить браузер
+}
+
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
+  gulp.watch([path.watch.js], js);
 }
 
 function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(css, html));
+let build = gulp.series(clean, gulp.parallel(js, css, html));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.js = js;
 exports.css = css;
 exports.html = html;
 exports.build = build;
