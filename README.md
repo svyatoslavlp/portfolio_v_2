@@ -3,4 +3,5 @@
 ----
 Состояние:  
    * Создание структуры каталогов  
-   * Настройка Gulp по видео [Фрилансера по жизни](https://www.youtube.com/watch?v=stFOy0Noahg&t=3761s)      
+   * Настройка Gulp по видео [Фрилансера по жизни](https://www.youtube.com/watch?v=stFOy0Noahg&t=3761s)  
+44:11

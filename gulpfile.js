@@ -30,13 +30,14 @@ let path = {
 
 let { src, dest } = require("gulp"),
   gulp = require("gulp"),
-  browsersync = require("browser-sync").create();
-(fileinclude = require("gulp-file-include")),
-  (del = require("del")),
-  (scss = require("gulp-sass")),
-  (autoprefixer = require("gulp-autoprefixer")),
-  (group_media = require("gulp-group-css-media-queries")),
-  (clean_css = require("gulp-clean-css"));
+  browsersync = require("browser-sync").create(),
+  fileinclude = require("gulp-file-include"),
+  del = require("del"),
+  scss = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  group_media = require("gulp-group-css-media-queries"),
+  clean_css = require("gulp-clean-css"),
+  rename = require("gulp-rename");
 
 function browserSync(params) {
   browsersync.init({
@@ -67,9 +68,16 @@ function css(params) {
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
         cascade: true,
-      }).pipe(clean_css())
+      })
     )
     .pipe(dest(path.build.css)) // собрать новый css
+    .pipe(clean_css())
+    .pipe(
+      rename({
+        extname: ".min.css",
+      })
+    )
+    .pipe(dest(path.build.css)) // собрать сжатый css
     .pipe(browsersync.stream()); // обновить браузер
 }
 
