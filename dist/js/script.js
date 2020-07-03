@@ -1,4 +1,4 @@
-alert ('Hello Gulp!');
+
 //скрипт проверяющий поддержку webp и подключающий стили для webp -- начало
 function testWebP(callback) {
 
