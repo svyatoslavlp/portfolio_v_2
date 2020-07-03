@@ -39,7 +39,10 @@ let { src, dest } = require("gulp"),
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   uglify = require("gulp-uglify-es").default,
-  imagemin = require("gulp-imagemin");
+  imagemin = require("gulp-imagemin"),
+  webp = require("gulp-webp"),
+  webphtml = require("gulp-webp-html"),
+  webpcss = require("gulp-webpcss");
 
 function browserSync(params) {
   browsersync.init({
@@ -54,6 +57,7 @@ function browserSync(params) {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude()) // собираем html файлы в один
+    .pipe(webphtml()) // автоматическое подключение в html файлов изображений в формате webp
     .pipe(dest(path.build.html)) // собрать новый html
     .pipe(browsersync.stream()); // обновить браузер
 }
@@ -72,6 +76,7 @@ function css(params) {
         cascade: true,
       })
     )
+    .pipe(webpcss()) // обработать css под webp
     .pipe(dest(path.build.css)) // собрать новый css
     .pipe(clean_css())
     .pipe(
@@ -102,6 +107,13 @@ function js() {
 function images() {
   return src(path.src.img)
     .pipe(
+      webp({
+        quality: 70
+      })
+    )
+    .pipe(dest(path.build.img)) // выгрузить
+    .pipe(src(path.src.img)) // обращаемся к исходным изображениям
+    .pipe(
       imagemin({
         progressive: true,
         svgoPligins: [{ removeViewBox: false }],
@@ -109,7 +121,7 @@ function images() {
         optimizationLevel: 3 // 0 - 7
       })
     )
-    .pipe(dest(path.build.img)) // собрать новый 
+    .pipe(dest(path.build.img)) // выгрузить 
     .pipe(browsersync.stream()); // обновить браузер
 }
 

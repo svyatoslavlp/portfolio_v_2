@@ -10,6 +10,7 @@ span {
 }
 
 div {
+  background-image: url(../img/avatar.jpg);
   font-size: 50px;
 }
 
@@ -22,3 +23,5 @@ div {
     font-size: 10px;
   }
 }
+
+.webp div { background-image: url(../img/avatar.webp); }
