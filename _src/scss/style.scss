@@ -1,7 +1,28 @@
+/* Color Theme Swatches in Hex */
+$Взаимодействие-1-hex: #d9763d;
+$Взаимодействие-2-hex: #8c4e2a;
+$Взаимодействие-3-hex: #f2f2f2;
+$Взаимодействие-4-hex: #595959;
+$Взаимодействие-5-hex: #0d0d0d;
+
 body {
-    background-color: #ccc;
+  background-color: $Взаимодействие-5-hex;
 }
 
+h1 {
+  color: $Взаимодействие-3-hex;
+}
+h2 {
+    color: $Взаимодействие-1-hex;
+  }
+  p {
+      background-color: $Взаимодействие-5-hex
+  }
+.footer {
+    background-color: $Взаимодействие-4-hex;
+    color: $Взаимодействие-3-hex;
+  }
+
 .face {
-    height: 150px;
+  height: 150px;
 }
