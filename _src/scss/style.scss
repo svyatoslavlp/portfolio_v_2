@@ -14,6 +14,9 @@ body {
   margin: 0;
   color: $white;
 }
+.hero {
+  background: linear-gradient(0.01deg, $black 0.01%, $gray 95.44%);
+}
 .conteiner {
   max-width: 945px;
   margin: auto;
@@ -21,7 +24,7 @@ body {
 // hero
 .header {
   color: $orange;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .navigation {
   display: flex;
@@ -32,10 +35,52 @@ body {
 .social-link {
   margin-left: 21px;
 }
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 155px;
+}
 .subtitle {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
   color: $orange;
+}
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+.hero-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0 0 38px 0;
+  max-width: 44.5%;
+}
+.button {
+  background: linear-gradient(180deg, $white 0%, $gray 100%);
+  box-shadow: 0px 4px 0px $brown;
+  border-radius: 5px 5px 10px 10px;
+  padding: 24px 42px;
+  border: none;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 14px;
+}
+.face {
+  width: 389px;
+  height: 389px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: -13px 0px;
+  border: 13px solid $gray;
 }
