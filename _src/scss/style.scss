@@ -9,8 +9,10 @@ $black: #0d0d0d;
   box-sizing: border-box;
 }
 body {
+  font-family: "Roboto", sans-serif;
   background-color: $black;
   margin: 0;
+  color: $white;
 }
 .conteiner {
   max-width: 945px;
@@ -25,25 +27,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 105px;
 }
 .social-link {
   margin-left: 21px;
 }
-
-h1 {
-  color: $white;
-}
-h2 {
+.subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
   color: $orange;
-}
-p {
-  background-color: $black;
-}
-.footer {
-  background-color: $gray;
-  color: $white;
-}
-
-.face {
-  height: 150px;
 }
