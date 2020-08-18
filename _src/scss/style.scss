@@ -5,25 +5,44 @@ $white: #f2f2f2;
 $gray: #595959;
 $black: #0d0d0d;
 
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: $black;
+  margin: 0;
 }
+.conteiner {
+  max-width: 945px;
+  margin: auto;
+}
+// hero
 .header {
   color: $orange;
+  margin-top: 50px;
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-link {
+  margin-left: 21px;
+}
+
 h1 {
   color: $white;
 }
 h2 {
-    color: $orange;
-  }
-  p {
-      background-color: $black
-  }
+  color: $orange;
+}
+p {
+  background-color: $black;
+}
 .footer {
-    background-color: $gray;
-    color: $white;
-  }
+  background-color: $gray;
+  color: $white;
+}
 
 .face {
   height: 150px;
