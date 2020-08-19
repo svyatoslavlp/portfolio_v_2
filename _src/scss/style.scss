@@ -8,39 +8,48 @@ $black: #0d0d0d;
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: $black;
   margin: 0;
   color: $white;
 }
+
 .hero {
   background: linear-gradient(0.01deg, $black 0.01%, $gray 95.44%);
 }
+
 .conteiner {
   max-width: 945px;
   margin: auto;
+  border: 1px solid red;
 }
+
 // hero
 .header {
   color: $orange;
   padding-top: 50px;
 }
+
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 105px;
 }
+
 .social-link {
   margin-left: 21px;
 }
+
 .hero-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 155px;
 }
+
 .subtitle {
   font-style: normal;
   font-weight: normal;
@@ -48,6 +57,7 @@ body {
   line-height: 28px;
   color: $orange;
 }
+
 .title {
   font-style: normal;
   font-weight: bold;
@@ -56,6 +66,7 @@ body {
   margin-top: 14px;
   margin-bottom: 20px;
 }
+
 .hero-description {
   font-style: normal;
   font-weight: normal;
@@ -64,6 +75,7 @@ body {
   margin: 0 0 38px 0;
   max-width: 44.5%;
 }
+
 .button {
   background: linear-gradient(180deg, $white 0%, $gray 100%);
   box-shadow: 0px 4px 0px $brown;
@@ -76,6 +88,7 @@ body {
   font-size: 12px;
   line-height: 14px;
 }
+
 .face {
   width: 389px;
   height: 389px;
@@ -84,3 +97,29 @@ body {
   object-position: -13px 0px;
   border: 13px solid $gray;
 }
+
+.features {}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: $white;
+  margin: 64px 0 84px 0;
+}
+
+.features-blocks {
+  display: flex;
+}
+
+.features-block {}
+
+.features-img {
+  width: 50px;
+height: 50px;
+}
+
+.features-subtitle {}
+
+.features-description {}

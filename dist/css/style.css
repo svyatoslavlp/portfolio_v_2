@@ -20,6 +20,7 @@ body {
 .conteiner {
   max-width: 945px;
   margin: auto;
+  border: 1px solid red;
 }
 
 .header {
@@ -108,4 +109,24 @@ body {
   -o-object-position: -13px 0px;
      object-position: -13px 0px;
   border: 13px solid #595959;
+}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #f2f2f2;
+  margin: 64px 0 84px 0;
+}
+
+.features-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features-img {
+  width: 50px;
+  height: 50px;
 }
