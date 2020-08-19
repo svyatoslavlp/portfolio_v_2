@@ -7,12 +7,12 @@ $black: #0d0d0d;
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   background-color: $black;
-  margin: 0;
   color: $white;
 }
 
@@ -24,6 +24,20 @@ body {
   max-width: 945px;
   margin: auto;
   border: 1px solid red;
+}
+
+section {
+  padding: 64px 0 92px;
+  border: 1px solid red;
+}
+
+.section-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: $white;
+  padding-bottom: 84px;
 }
 
 // hero
@@ -98,28 +112,33 @@ body {
   border: 13px solid $gray;
 }
 
+// features
 .features {}
 
-.features-title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  color: $white;
-  margin: 64px 0 84px 0;
-}
 
 .features-blocks {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.features-block {}
+.features-block {
+  flex-basis: 30%;
+  margin-bottom: 63px;
+}
 
 .features-img {
   width: 50px;
-height: 50px;
+  height: 50px;
+  margin-bottom: 22px;
 }
 
-.features-subtitle {}
+.features-subtitle {
+  font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 28px;
+color: $white;
+}
 
 .features-description {}
