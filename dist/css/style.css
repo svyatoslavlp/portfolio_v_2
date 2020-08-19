@@ -154,4 +154,27 @@ section {
   font-size: 24px;
   line-height: 28px;
   color: #f2f2f2;
+  margin-bottom: 16px;
+}
+
+.features-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #f2f2f2;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #595959;
 }
