@@ -1,24 +1,24 @@
 /* Color Theme Swatches in Hex */
 
 body {
-  background-color: #0d0d0d;
+  background-color: #D7D7D9;
 }
 
 h1 {
-  color: #f2f2f2;
+  color: #73564F;
 }
 
 h2 {
-  color: #d9763d;
+  color: #73564F;
 }
 
 p {
-  background-color: #0d0d0d;
+  background-color: #D7D7D9;
 }
 
 .footer {
-  background-color: #595959;
-  color: #f2f2f2;
+  background-color: #D7D7D9;
+  color: #73564F;
 }
 
 .face {

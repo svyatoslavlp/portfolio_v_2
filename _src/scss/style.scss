@@ -1,26 +1,26 @@
 /* Color Theme Swatches in Hex */
-$Взаимодействие-1-hex: #d9763d;
-$Взаимодействие-2-hex: #8c4e2a;
-$Взаимодействие-3-hex: #f2f2f2;
-$Взаимодействие-4-hex: #595959;
-$Взаимодействие-5-hex: #0d0d0d;
+$focus: #401B22;
+$accent: #8C324A;
+$background: #D7D7D9;
+$shadow: #8C8987;
+$color: #73564F;
 
 body {
-  background-color: $Взаимодействие-5-hex;
+  background-color: $background;
 }
 
 h1 {
-  color: $Взаимодействие-3-hex;
+  color: $color;
 }
 h2 {
-    color: $Взаимодействие-1-hex;
+    color: $color;
   }
   p {
-      background-color: $Взаимодействие-5-hex
+      background-color: $background
   }
 .footer {
-    background-color: $Взаимодействие-4-hex;
-    color: $Взаимодействие-3-hex;
+    background-color: $background;
+    color: $color;
   }
 
 .face {
