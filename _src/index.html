@@ -3,22 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Портфолио Святослава</title>
   </head>
   <body>
-    @@include('_header.html')
-    <div>
-      <img class="face" src="img/avatar.jpg" alt="face" srcset="" />
-      <h1>Сайт портфолио Святослава</h1>
-      <h2>Привет посетитель!</h2>
-      <p>
-        Здесь будет обновлённый сайт портфолио Святослава.<br />
-        Буду пробовать <span> БЭМ, Gulp</span>, и <span>тренироваться</span> в
-        вёрстке.
-      </p>
-    </div>
-    @@include('_footer.html')
+    @@include('./html/_header.html')
+    @@include('./html/_main.html')
+    @@include('./html/_footer.html')
     <script src="js/script.min.js"></script>
   </body>
 </html>

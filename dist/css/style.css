@@ -2,6 +2,111 @@
 
 body {
   background-color: #D7D7D9;
+  font-family: 'Roboto', sans-serif;
+}
+
+.conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: block;
+}
+
+.logo__img {
+  width: 95px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.logo img:hover {
+  background-color: #fff;
+  border-radius: 10%;
+  -webkit-box-shadow: inset 0px 0px 6px #8C8987;
+          box-shadow: inset 0px 0px 6px #8C8987;
+}
+
+.menu {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  list-style-type: none;
+}
+
+.menu__link a {
+  text-decoration: none;
+  color: #73564F;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu__link a:hover {
+  color: #401B22;
+  text-decoration: underline;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.social-links__social-link {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.social-links__social-link_img {
+  height: 47px;
+}
+
+.social-links__social-link:hover {
+  background-color: #fff;
+  border-radius: 10%;
+  -webkit-box-shadow: inset 0px 0px 6px #8C8987;
+          box-shadow: inset 0px 0px 6px #8C8987;
 }
 
 h1 {

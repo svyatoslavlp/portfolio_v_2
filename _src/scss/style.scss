@@ -1,27 +1,112 @@
 /* Color Theme Swatches in Hex */
 $focus: #401B22;
+$bg-focus: #fff;
 $accent: #8C324A;
 $background: #D7D7D9;
 $shadow: #8C8987;
 $color: #73564F;
 
+
 body {
   background-color: $background;
+  font-family: 'Roboto', sans-serif;
 }
+
+.conteiner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  &__img {
+    width: 95px;
+    transition: 0.5s;
+  }
+
+  display: block;
+}
+
+
+.logo img:hover {
+  background-color: $bg-focus;
+  border-radius: 10%;
+  box-shadow: inset 0px 0px 6px $shadow;
+}
+
+.menu {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    list-style-type: none;
+
+    & a {
+      text-decoration: none;
+      color: $color;
+      transition: 0.5s;
+    }
+
+    & a:hover {
+      color: $focus;
+      text-decoration: underline;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-basis: 20%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+
+  &__social-link {
+    transition: 0.5s;
+
+    &_img {
+      height: 47px;
+    }
+  }
+
+  &__social-link:hover {
+    background-color: $bg-focus;
+    border-radius: 10%;
+    box-shadow: inset 0px 0px 6px $shadow;
+  }
+
+}
+
+
 
 h1 {
   color: $color;
 }
+
 h2 {
-    color: $color;
-  }
-  p {
-      background-color: $background
-  }
+  color: $color;
+}
+
+p {
+  background-color: $background
+}
+
 .footer {
-    background-color: $background;
-    color: $color;
-  }
+  background-color: $background;
+  color: $color;
+}
 
 .face {
   height: 150px;
