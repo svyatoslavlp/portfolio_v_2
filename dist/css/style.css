@@ -3,11 +3,13 @@
 body {
   background-color: #D7D7D9;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 .conteiner {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 nav {
@@ -34,7 +36,7 @@ nav {
   transition: 0.5s;
 }
 
-.logo img:hover {
+.logo__img:hover {
   background-color: #fff;
   border-radius: 10%;
   -webkit-box-shadow: inset 0px 0px 6px #8C8987;
@@ -57,8 +59,8 @@ nav {
 .menu__link {
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 2em;
+  line-height: 2.1em;
   list-style-type: none;
 }
 
@@ -109,6 +111,28 @@ nav {
           box-shadow: inset 0px 0px 6px #8C8987;
 }
 
+.start {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.face {
+  height: 330px;
+  width: 330px;
+  background-image: url(../img/avatar.jpg);
+  background-attachment: no-repeat;
+  background-position: top 0px left -50px;
+  border: 2px solid #8C8987;
+  -webkit-filter: drop-shadow(0px 3px 4px #8C8987);
+          filter: drop-shadow(0px 3px 4px #8C8987);
+  border-radius: 72px;
+}
+
 h1 {
   color: #73564F;
 }
@@ -126,6 +150,4 @@ p {
   color: #73564F;
 }
 
-.face {
-  height: 150px;
-}
+.webp .face { background-image: url(../img/avatar.webp); }

@@ -10,11 +10,13 @@ $color: #73564F;
 body {
   background-color: $background;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 .conteiner {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 nav {
@@ -30,14 +32,13 @@ nav {
     transition: 0.5s;
   }
 
+  &__img:hover {
+    background-color: $bg-focus;
+    border-radius: 10%;
+    box-shadow: inset 0px 0px 6px $shadow;
+  }
+
   display: block;
-}
-
-
-.logo img:hover {
-  background-color: $bg-focus;
-  border-radius: 10%;
-  box-shadow: inset 0px 0px 6px $shadow;
 }
 
 .menu {
@@ -49,8 +50,8 @@ nav {
   &__link {
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 2em;
+    line-height: 2.1em;
     list-style-type: none;
 
     & a {
@@ -89,6 +90,22 @@ nav {
 
 }
 
+.start {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.face {
+  height: 330px;
+  width: 330px;
+  background-image: url(../img/avatar.jpg);
+  background-attachment: no-repeat;
+  background-position: top 0px left -50px;
+  border: 2px solid #8C8987;
+  filter: drop-shadow(0px 3px 4px #8C8987);
+  border-radius: 72px;
+}
 
 
 h1 {
@@ -106,8 +123,4 @@ p {
 .footer {
   background-color: $background;
   color: $color;
-}
-
-.face {
-  height: 150px;
 }
